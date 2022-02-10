@@ -4,7 +4,8 @@ name: Pipeline
 on:
   push:
     branches: [ master ]
-    
+id: 
+        uses: ./.github/workflows/env.yml    
 #starting buildjob 
 jobs:
   build:
@@ -13,6 +14,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Step 1 - Checkout main branch from GitHub 
         uses: actions/checkout@v2
+      - name:
+      - run: echo ${name}
         
   jobs:
     Scanner:  
