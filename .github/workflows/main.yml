@@ -14,7 +14,7 @@ jobs:
       - name: Step 1 - Checkout main branch from GitHub 
         uses: actions/checkout@v2
         
-      - name: Download Fortify ScanCentral Client
+      - name: Download Fortify ScanCentral Client 
         uses: fortify/gha-setup-scancentral-client@v1
         with:
           version: 21.2.0  
