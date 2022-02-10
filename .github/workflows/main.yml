@@ -77,4 +77,5 @@ jobs:
           password: Azuredevops@123
           org: 6fece677trial
           space: prod
-          manifest: Vishwastp89/sample-hellowrold-java/manifest.yml
+          #manifest: Vishwastp89/sample-hellowrold-java/manifest.yml
+          command: push -f manifest.yml
