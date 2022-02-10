@@ -14,11 +14,13 @@ jobs:
       - name: Step 1 - Checkout main branch from GitHub 
         uses: actions/checkout@v2
         
-      - name: Download Fortify ScanCentral Client
-        uses: fortify/gha-setup-scancentral-client@v1
-        with:
-          version: 21.2.0  
-          #client-auth-token: ${{ secrets.CLIENT_AUTH_TOKEN }}
+  jobs:
+  Scanner:        
+   - name: Download Fortify ScanCentral Client
+     uses: fortify/gha-setup-scancentral-client@v1
+     with:
+            version: 21.2.0  
+            #client-auth-token: ${{ secrets.CLIENT_AUTH_TOKEN }}
           
       #- name: Perform SAST Scan
         #run: |
@@ -78,18 +80,18 @@ jobs:
           #space: prod
           #manifest: manifest.yml
           
-      - name: step to deploy CF
-        run: |
+      #- name: step to deploy CF
+       # run: |
          #wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
          #echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-         sudo apt-get update
-         sudo apt-get install cf8-cli
-         cf login -a https://api.cf.ap21.hana.ondemand.com -u ramyaravindra999@gmail.com -p ${{ secrets.CF_PASSWORD }} -o 6fece677trial -s prod
+        # sudo apt-get update
+         #sudo apt-get install cf8-cli
+         #cf login -a https://api.cf.ap21.hana.ondemand.com -u ramyaravindra999@gmail.com -p ${{ secrets.CF_PASSWORD }} -o 6fece677trial -s prod
          #cf login -a ${{ secrets.CF_API }} -u ${{ secrets.CF_USERNAME }}m -p ${{ secrets.CF_PASSWORD }} -o ${{ secrets.CF_ORGANISATION }} -s ${{ secrets.CF_SPACE }}
-         pwd
-         cd build
-         cd libs
-         pwd
-         cf push test -p gradle-github-actions-example.jar --no-route
+         #pwd
+         #cd build
+         #cd libs
+         #pwd
+         #cf push test -p gradle-github-actions-example.jar --no-route
          
 
