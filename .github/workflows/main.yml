@@ -70,7 +70,7 @@ jobs:
         
       - name: Step 7 - Deploy to CF
         #uses: jhunt/cf-push@v1
-        uses: Vishwastp89/CF@CF_p
+        uses: Vishwastp89/CF@master
         with:
           CF_API: https://api.cf.ap21.hana.ondemand.com
           CF_USERNAME: ramyaravindra999@gmail.com
