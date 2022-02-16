@@ -1,0 +1,16 @@
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 7 - Deploy to CF
+        #uses: jhunt/cf-push@v1
+        uses: Vishwastp89/CF@main
+        with:
+          CF_API: https://api.cf.ap21.hana.ondemand.com
+          CF_USERNAME: ramyaravindra999@gmail.com
+          CF_PASSWORD: Azuredevops@123
+          CF_ORG: 6fece677trial
+          CF_SPACE: prod
+          #manifest: Vishwastp89/sample-hellowrold-java/manifest.yml
+          command: target
