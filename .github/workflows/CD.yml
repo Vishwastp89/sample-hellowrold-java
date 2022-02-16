@@ -5,7 +5,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Step 7 - Deploy to CF 
+      - name: Step 7 - Deploy to CF
         #uses: jhunt/cf-push@v1
         uses: Vishwastp89/CF@main
         with:
