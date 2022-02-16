@@ -35,7 +35,7 @@ jobs:
           ls '${{ github.workspace }}'/build/libs
           ls '${{ github.workspace }}'
   calling-CD:
-    needs: CI
-    uses: Vishwastp89/sample-hellowrold-java/.github/workflows/CD.yml@CD
+    #needs: CI
+    uses: Vishwastp89/sample-hellowrold-java/.github/workflows/CD.yml@CICD
   
   
