@@ -3,7 +3,7 @@ name: Pipeline
 
 on:
   push:
-    branches: [ branch_checkingjhunt ]
+    branches: [ CICD ]
     
 #starting buildjob 
 jobs:
