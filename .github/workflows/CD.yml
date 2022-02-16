@@ -1,4 +1,6 @@
-
+name: CD
+on:
+  workflow_call:
 jobs:
   build:
     runs-on: ubuntu-latest
