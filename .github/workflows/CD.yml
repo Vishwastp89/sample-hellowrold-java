@@ -15,4 +15,3 @@ jobs:
           ORG: 6fece677trial
           SPACE: prod
           manifest: manifest.yml
-          command: target
